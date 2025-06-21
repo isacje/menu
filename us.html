@@ -35,19 +35,19 @@
     }
     
     .menu-container {
-      max-width: 90vw;
-      width: 900px;
+      max-width: 900px;
+      width: 100%;         /* fill width with max 900px */
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
       border-radius: 2rem;
       padding: 1.5rem 2rem;
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
       border: 0.2rem solid rgba(255, 107, 53, 0.2);
-      height: 90vh;
+      height: 90vh;        /* fixed height */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      overflow: hidden; /* no scroll */
+      overflow: visible;   /* allow content to show */
     }
     
     .header {
@@ -82,7 +82,14 @@
       flex-direction: column;
       gap: 1.5rem;
       flex-grow: 1;
-      overflow: hidden;
+      overflow: visible;  /* ensure content is fully visible */
+    }
+    
+    .menu-section,
+    .combo-section {
+      flex-shrink: 1;    /* allow shrinking */
+      max-height: none;  /* remove max-height limit */
+      overflow: visible; /* ensure full visibility */
     }
     
     .menu-section {
@@ -93,8 +100,6 @@
       display: flex;
       flex-direction: column;
       height: auto;
-      max-height: 50%;
-      overflow: hidden;
     }
     
     .section-title {
@@ -111,7 +116,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      overflow: hidden;
+      overflow: visible;
     }
     
     .static-item {
@@ -161,6 +166,7 @@
       max-width: 480px;
       margin: 0 auto;
       font-size: clamp(0.9rem, 2vw, 1.1rem);
+      text-align: center;
     }
 
     .combo-title {
@@ -172,7 +178,6 @@
       border-bottom: 2.5px solid #f7931e;
       padding-bottom: 0.3rem;
       font-family: 'Poppins', sans-serif;
-      text-align: center;
     }
 
     .combo-list {
@@ -183,6 +188,8 @@
       line-height: 1.8;
       border-left: 3px solid #f7931e;
       padding-left: 1rem;
+      max-width: 300px;
+      margin: 0 auto;
     }
 
     .combo-list li {
@@ -190,6 +197,7 @@
       padding-left: 1.2rem;
       margin-bottom: 0.8rem;
       transition: color 0.3s ease;
+      cursor: default;
     }
 
     .combo-list li::before {
