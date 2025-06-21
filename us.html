@@ -21,7 +21,7 @@
       animation: gradientShift 8s ease infinite;
       color: #2c1810;
       height: 100vh;
-      padding: 0.3rem;
+      padding: 0.05rem;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -35,15 +35,15 @@
     }
     
     .menu-container {
-      max-width: 1200px;
-      width: 98%;
+      max-width: 1600px;
+      width: 99.8%;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
-      border-radius: 2rem;
+      border-radius: 1rem;
       padding: 1.5rem 2rem;
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
-      border: 0.2rem solid rgba(255, 107, 53, 0.2);
-      height: 96vh;
+      border: 0.05rem solid rgba(255, 107, 53, 0.2);
+      height: 99.5vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -52,35 +52,36 @@
     
     .header {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       flex-shrink: 0;
     }
     
     .restaurant-name {
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 4rem);
+      font-size: clamp(2.5rem, 6vw, 5rem);
       font-weight: 900;
       background: linear-gradient(45deg, #ff6b35, #f7931e, #ffcc02);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
       text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
       line-height: 1.1;
     }
     
     .tagline {
-      font-size: clamp(0.75rem, 2.5vw, 1.1rem);
+      font-size: clamp(1rem, 3vw, 1.4rem);
       color: #8B4513;
       font-weight: 600;
       letter-spacing: 0.05rem;
       padding: 0 1rem;
+      margin-bottom: 1rem;
     }
     
     .menu-grid {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2.5rem;
       flex-grow: 1;
       overflow: visible;
     }
@@ -88,7 +89,7 @@
     .menu-section {
       background: linear-gradient(135deg, rgba(255, 204, 2, 0.1), rgba(247, 147, 30, 0.1));
       border-radius: 1.5rem;
-      padding: 1rem 1.5rem;
+      padding: 2rem 2.5rem;
       border: 0.2rem solid rgba(255, 107, 53, 0.2);
       display: flex;
       flex-direction: column;
@@ -97,9 +98,9 @@
     
     .section-title {
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.2rem, 4vw, 2rem);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
       color: #ff6b35;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: center;
       font-weight: 800;
       text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
@@ -108,7 +109,7 @@
     .menu-items {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 1rem;
       overflow: visible;
     }
     
@@ -116,13 +117,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5rem 0.75rem;
+      padding: 1rem 1.5rem;
       border-radius: 1rem;
       background: rgba(255, 255, 255, 0.6);
       border: 0.15rem solid rgba(255, 107, 53, 0.1);
       transition: all 0.3s ease;
-      max-height: 3rem;
-      font-size: clamp(0.8rem, 2vw, 1rem);
+      min-height: 4rem;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     }
     
     .static-item:hover {
@@ -152,11 +153,11 @@
     .combo-section {
       background: #fff7e6;
       border-radius: 1.5rem;
-      padding: 1.5rem 2rem;
+      padding: 2.5rem 3rem;
       box-shadow: 0 0.8rem 1.6rem rgba(247, 147, 30, 0.15);
       border: 1px solid #f7a721;
       color: #5a3200;
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -165,12 +166,12 @@
     
     .combo-title {
       font-weight: 700;
-      font-size: 1.8rem;
+      font-size: clamp(2rem, 5vw, 2.8rem);
       color: #f7931e;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       letter-spacing: 0.05rem;
       border-bottom: 2.5px solid #f7931e;
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.5rem;
       font-family: 'Poppins', sans-serif;
       width: 100%;
       text-align: center;
@@ -178,27 +179,28 @@
     
     .combo-list {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       list-style: none;
       padding-left: 0;
       margin: 0;
       justify-content: center;
       width: 100%;
-      max-width: 600px;
+      max-width: 800px;
       flex-wrap: nowrap;
       overflow: visible;
     }
     
     .combo-list li {
       position: relative;
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
       cursor: default;
       color: #8b5e00;
-      font-weight: 500;
-      line-height: 1.8;
+      font-weight: 600;
+      line-height: 2;
       white-space: nowrap;
       transition: color 0.3s ease;
       flex: none;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     }
     
     .combo-list li::before {
@@ -207,8 +209,8 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 0.6rem;
-      height: 0.6rem;
+      width: 0.8rem;
+      height: 0.8rem;
       background-color: #f7931e;
       border-radius: 50%;
       box-shadow: 0 0 5px rgba(247, 147, 30, 0.5);
