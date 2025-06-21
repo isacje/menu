@@ -22,7 +22,7 @@
       color: #2c1810;
       height: 100vh;
       padding: 0.5rem;
-      overflow: hidden; /* no scroll */
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -36,18 +36,18 @@
     
     .menu-container {
       max-width: 900px;
-      width: 100%;         /* fill width with max 900px */
+      width: 100%;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
       border-radius: 2rem;
       padding: 1.5rem 2rem;
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
       border: 0.2rem solid rgba(255, 107, 53, 0.2);
-      height: 90vh;        /* fixed height */
+      height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      overflow: visible;   /* allow content to show */
+      overflow: visible;
     }
     
     .header {
@@ -82,14 +82,7 @@
       flex-direction: column;
       gap: 1.5rem;
       flex-grow: 1;
-      overflow: visible;  /* ensure content is fully visible */
-    }
-    
-    .menu-section,
-    .combo-section {
-      flex-shrink: 1;    /* allow shrinking */
-      max-height: none;  /* remove max-height limit */
-      overflow: visible; /* ensure full visibility */
+      overflow: visible;
     }
     
     .menu-section {
@@ -154,8 +147,8 @@
       text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
       margin-left: 1rem;
     }
-
-    /* Combo Section */
+    
+    /* Combo Section Horizontal */
     .combo-section {
       background: #fff7e6;
       border-radius: 1.5rem;
@@ -163,12 +156,13 @@
       box-shadow: 0 0.8rem 1.6rem rgba(247, 147, 30, 0.15);
       border: 1px solid #f7a721;
       color: #5a3200;
-      max-width: 480px;
-      margin: 0 auto;
       font-size: clamp(0.9rem, 2vw, 1.1rem);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
+    
     .combo-title {
       font-weight: 700;
       font-size: 1.8rem;
@@ -178,28 +172,35 @@
       border-bottom: 2.5px solid #f7931e;
       padding-bottom: 0.3rem;
       font-family: 'Poppins', sans-serif;
+      width: 100%;
+      text-align: center;
     }
-
+    
     .combo-list {
+      display: flex;
+      gap: 2rem;
       list-style: none;
       padding-left: 0;
-      font-weight: 500;
-      color: #8b5e00;
-      line-height: 1.8;
-      border-left: 3px solid #f7931e;
-      padding-left: 1rem;
-      max-width: 300px;
-      margin: 0 auto;
+      margin: 0;
+      justify-content: center;
+      width: 100%;
+      max-width: 600px;
+      flex-wrap: nowrap;
+      overflow: visible;
     }
-
+    
     .combo-list li {
       position: relative;
       padding-left: 1.2rem;
-      margin-bottom: 0.8rem;
-      transition: color 0.3s ease;
       cursor: default;
+      color: #8b5e00;
+      font-weight: 500;
+      line-height: 1.8;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+      flex: none;
     }
-
+    
     .combo-list li::before {
       content: "";
       position: absolute;
@@ -213,14 +214,29 @@
       box-shadow: 0 0 5px rgba(247, 147, 30, 0.5);
       transition: background-color 0.3s ease;
     }
-
+    
     .combo-list li:hover {
       color: #d26900;
     }
-
+    
     .combo-list li:hover::before {
       background-color: #d26900;
       box-shadow: 0 0 7px rgba(210, 105, 0, 0.7);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .combo-list {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .combo-list li {
+        white-space: normal;
+        flex: 1 1 40%;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
     }
   </style>
 </head>
@@ -271,7 +287,7 @@
         </div>
       </div>
 
-      <!-- Combo Section -->
+      <!-- Combo Section Horizontal -->
       <div class="combo-section">
         <h2 class="section-title combo-title">Combo</h2>
         <ul class="combo-list">
