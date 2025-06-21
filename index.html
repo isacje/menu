@@ -373,16 +373,44 @@
     
     /* Ultra-wide screens */
     @media (min-width: 1920px) {
-      .menu-container {
-        max-width: 88vw;
-        height: calc(100vh - 1rem);
-      }
-      
-      .menu-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-      }
-    }
+  .menu-container {
+    max-width: 85vw;
+    height: calc(100vh - 1rem);
+    padding: 4rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+  }
+
+  .menu-item,
+  .static-item {
+    padding: 1.25rem 2rem;
+    font-size: 1.75rem;
+    max-height: none;
+  }
+
+  .item-name,
+  .name {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .item-price,
+  .price {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+}
     
     /* Very small screens */
     @media (max-width: 320px) {
@@ -473,23 +501,23 @@
               <span class="price">$1.99</span>
             </div>
           </div>
-          <h2 class="section-title">Combo - $10.99 </h2>
+          <!-- <h2 class="section-title">Combo - $10.99 </h2>
           <div class="static-item">
               <span class="name">One Meat</span>
               <!-- <span class="price">$1.99</span> -->
-            </div>
-            <div class="static-item">
-              <span class="name">One Vegetable</span>
+            <!-- </div> -->
+            <!-- <div class="static-item"> -->
+              <!-- <span class="name">One Vegetable</span> -->
               <!-- <span class="price">$1.99</span> -->
-            </div>
-            <div class="static-item">
-              <span class="name">Rice</span>
+            <!-- </div> -->
+            <!-- <div class="static-item"> -->
+              <!-- <span class="name">Rice</span> -->
               <!-- <span class="price">$1.99</span> -->
-            </div><div class="static-item">
-              <span class="name">Porotta/Naan</span>
+            <!-- </div><div class="static-item"> -->
+              <!-- <span class="name">Porotta/Naan</span> -->
               <!-- <span class="price">$1.99</span> -->
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> --> -->
 
         <!-- Dynamic Today's Menu -->
         <div class="menu-section">
